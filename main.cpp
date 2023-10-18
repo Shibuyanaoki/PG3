@@ -40,9 +40,9 @@ void SetTimeout(newType a, int second, int select,int num) {
 int main() {
 	//ƒ‰ƒ“ƒ_ƒ€ŠÖ”
 	srand((unsigned int)time(NULL));
-	newType a;
+	newType calc;
 
-	a = Lottery;
+	calc = Lottery;
 	int num;
 	int select = 0;
 
@@ -51,7 +51,7 @@ int main() {
 	scanf_s("%d", &select);
 	num = 1 + rand() % 6;
 
-	SetTimeout(a, 3, select, num);
+	SetTimeout(calc, 3, select, num);
 
 	return 0;
 
