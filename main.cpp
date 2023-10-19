@@ -29,11 +29,11 @@ void Lottery(int* select, int* num) {
 
 }
 
-void SetTimeout(newType a, int second, int select,int num) {
+void SetTimeout(newType calc, int second, int select,int num) {
 
 	Sleep(second * 1000);
 
-	a(&select,&num);
+	calc(&select,&num);
 
 }
 
