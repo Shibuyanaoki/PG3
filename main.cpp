@@ -2,47 +2,27 @@
 #include <Windows.h>
 #include <stdlib.h>
 #include <time.h>
+#include <functional>
 
-typedef void (*newType)(int*, int*);
+//typedef void (*newType)(int*, int*);
 
-void Lottery(int* select, int* num) {
 
-	printf("サイコロの目は%dでした。\n", *num);
-
-	if (*select == 1) {
-		if (*num == 1 || *num == 3 || *num == 5) {
-			printf("おめでとうごさいます。半です");
-		}
-		else {
-			printf("残念ながら丁になります。");
-		}
-	}
-
-	if (*select == 2) {
-		if (*num == 0 || *num == 2 || *num == 4 || *num == 6) {
-			printf("おめでとうごさいます。丁です");
-		}
-		else {
-			printf("残念ながら半になります。");
-		}
-	}
-
-}
-
-void SetTimeout(newType a, int second, int select,int num) {
+void SetTimeout(int calc, int second, int select, int num) {
 
 	Sleep(second * 1000);
 
-	a(&select,&num);
+	//calc(select, num);
 
 }
 
 int main() {
 	//ランダム関数
 	srand((unsigned int)time(NULL));
-	newType a;
+	//newType calc;
 
-	a = Lottery;
+	//calc = Lottery;
+
+
 	int num;
 	int select = 0;
 
@@ -51,7 +31,39 @@ int main() {
 	scanf_s("%d", &select);
 	num = 1 + rand() % 6;
 
-	SetTimeout(a, 3, select, num);
+	std::function<void(void)> lottery = [=]() {
+		printf("サイコロの目は%dでした。\n", num);
+
+		if (select == 1) {
+			if (num == 1 || num == 3 || num == 5) {
+				printf("おめでとうごさいます。半です");
+			}
+			else {
+				printf("残念ながら丁になります。");
+			}
+		}
+
+		if (select == 2) {
+			if (num == 0 || num == 2 || num == 4 || num == 6) {
+				printf("おめでとうごさいます。丁です");
+			}
+			else {
+				printf("残念ながら半になります。");
+			}
+		}
+
+		};
+
+	std::function<void(int)> setTimeout = [=](int second) {
+		Sleep(second * 1000);
+
+		lottery();
+
+		};
+
+	setTimeout(3);
+
+	//SetTimeout(lottery, 3, select, num);
 
 	return 0;
 
