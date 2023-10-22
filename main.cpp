@@ -4,17 +4,6 @@
 #include <time.h>
 #include <functional>
 
-//typedef void (*newType)(int*, int*);
-
-
-void SetTimeout(int calc, int second, int select, int num) {
-
-	Sleep(second * 1000);
-
-	//calc(select, num);
-
-}
-
 int main() {
 	//ƒ‰ƒ“ƒ_ƒ€ŠÖ”
 	srand((unsigned int)time(NULL));
@@ -62,8 +51,6 @@ int main() {
 		};
 
 	setTimeout(3);
-
-	//SetTimeout(lottery, 3, select, num);
 
 	return 0;
 
