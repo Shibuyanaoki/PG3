@@ -1,9 +1,15 @@
 #pragma once
+#include "Phase.h"
 class Enemy
 {
 public:
 
+	/// <summary>
+	/// XV
+	/// </summary>
 	void Update();
+
+private:
 
 	/// <summary>
 	/// Ú‹ß
@@ -20,13 +26,11 @@ public:
 	/// </summary>
 	void Leave();
 
-
 private:
 
 	static void (Enemy::* fhaseTable[])();
 
-	//static_cast<size_t>(phase_);
-
+	Phase phase_ = Phase::APPROACH; 
 
 };
 
