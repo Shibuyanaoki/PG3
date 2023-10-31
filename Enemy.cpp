@@ -12,38 +12,22 @@ void (Enemy::* Enemy::fhaseTable[])() = {
 void Enemy::Update()
 {
 
-	switch (phase_) {
-	case Phase::APPROACH:
-		(this->*fhaseTable[0])();
+	(this->*fhaseTable[0])();
 
-		break;
+	(this->*fhaseTable[1])();
 
-	case Phase::SHOOTING:
-
-		(this->*fhaseTable[1])();
-
-		break;
-
-	case Phase::LEAVE:
-
-		(this->*fhaseTable[2])();
-		
-		break;
-
-	}
+	(this->*fhaseTable[2])();
 
 }
 
 void Enemy::Approach()
 {
 	printf("“G‚ªÚ‹ß‚µ‚Ä‚«‚½B\n");
-	phase_ = Phase::SHOOTING;
 }
 
 void Enemy::Shooting()
 {
 	printf("“G‚ªŒ‚‚Á‚Ä‚«‚½B\n");
-	phase_ = Phase::LEAVE;
 }
 
 void Enemy::Leave()
