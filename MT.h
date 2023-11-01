@@ -1,6 +1,6 @@
 #pragma once
 
-template <typename Type>
+template <typename Type1,typename Type2>
 
 class MT
 {
@@ -11,24 +11,24 @@ public:
 	}*/
 
 	//ã‚Æ“¯‚¶ˆÓ–¡
-	MT(Type num1, Type num2) :num1(num1), num2(num2) {};
+	MT(Type1 num1, Type2 num2) :num1(num1), num2(num2) {};
 
 
-	Type Min() {
+	Type1 Min() {
 		if (num1 < num2) {
-			return static_cast<Type>(num1);
+			return static_cast<Type1>(num1);
 		}
 
 		if (num1 > num2) {
-			return static_cast<Type>(num2);
+			return static_cast<Type1>(num2);
 		}
 	}
 
 
 private:
 
-	Type num1;
-	Type num2;
+	Type1 num1;
+	Type2 num2;
 
 };
 
