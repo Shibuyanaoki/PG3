@@ -1,11 +1,13 @@
 #include <stdio.h>
 #include "Mouse.h"
+#include "LogicoolMouse.h"
+
 
 int main() {
 
-	Mouse* mouse[3];
+	Mouse* mouse_[3] ;
 
-	mouse[1] = new Logicool;
+	mouse_[0] = new LogicoolMouse;
 
 	return 0;
 

@@ -10,6 +10,5 @@ class LogicoolMouse: public Mouse
 
 	void Company() override;
 
-
 };
 
