@@ -32,5 +32,7 @@ private:
 
 	Phase phase_ = Phase::APPROACH; 
 
+	//int num= static_cast<>
+
 };
 

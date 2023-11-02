@@ -12,17 +12,16 @@ void (Enemy::* Enemy::fhaseTable[])() = {
 void Enemy::Update()
 {
 
-	(this->*fhaseTable[0])();
-
-	(this->*fhaseTable[1])();
-
-	(this->*fhaseTable[2])();
+	(this->*fhaseTable[static_cast<size_t>(phase_)])();
 
 }
 
 void Enemy::Approach()
 {
 	printf("“G‚ªÚ‹ß‚µ‚Ä‚«‚½B\n");
+
+
+
 }
 
 void Enemy::Shooting()
