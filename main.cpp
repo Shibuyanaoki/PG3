@@ -5,7 +5,10 @@ int main() {
 
 	Enemy* enemy_ = new Enemy;
 
-	enemy_->Update();
+	while (enemy_->GetCount() == false) {
+		enemy_->Update();
+	}
+
 
 	return 0;
 }

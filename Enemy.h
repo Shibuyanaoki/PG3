@@ -9,6 +9,9 @@ public:
 	/// </summary>
 	void Update();
 
+
+	bool GetCount() { return count; }
+
 private:
 
 	/// <summary>
@@ -26,13 +29,15 @@ private:
 	/// </summary>
 	void Leave();
 
+	
+
 private:
 
 	static void (Enemy::* fhaseTable[])();
 
-	Phase phase_ = Phase::APPROACH; 
+	Phase phase_ = Phase::APPROACH;
 
-	//int num= static_cast<>
+	bool count = false;
 
 };
 
