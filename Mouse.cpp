@@ -11,5 +11,5 @@ Mouse::~Mouse()
 
 void Mouse::Company()
 {
-	printf("LogicoolêªÇÃÉ}ÉEÉXÇæ\n");
+	
 }
