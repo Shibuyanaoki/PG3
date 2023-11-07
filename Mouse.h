@@ -8,6 +8,4 @@ public:
 	~Mouse();
 
 	virtual void Company();
-
-
 };

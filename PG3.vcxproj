@@ -127,13 +127,15 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="LogicoolMouse.cpp" />
+    <ClCompile Include="Logicool.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="Mouse.cpp" />
+    <ClCompile Include="Razer.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="LogicoolMouse.h" />
+    <ClInclude Include="Logicool.h" />
     <ClInclude Include="Mouse.h" />
+    <ClInclude Include="Razer.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
