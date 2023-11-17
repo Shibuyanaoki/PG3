@@ -1,23 +1,23 @@
 #include <stdio.h>
-#include "Mouse.h"
-#include "Logicool.h"
-#include "Razer.h"
+#include "Animal.h"
+#include "Dog.h"
+#include "Cat.h"
 
 
 int main() {
 
-	Mouse* mouse_[2] ;
+	Animal* animal_[2] ;
 	for (int i = 0; i < 2; i++){
 		if (i < 1) {
-			mouse_[i] = new Logicool;
+			animal_[i] = new Dog;
 		}
 		else {
-			mouse_[i] = new Razer;
+			animal_[i] = new Cat;
 		}
 	}
 
 	for (int i = 0; i < 2; i++) {
-		mouse_[i]->Company();
+		animal_[i]->Cry();
 	}
 
 	return 0;
