@@ -15,6 +15,7 @@ protected:
 
 	//”¼Œa
 	int radius = 0;
+
 	//ƒÎ
 	int pi = 3.14;
 

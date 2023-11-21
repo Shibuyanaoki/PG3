@@ -3,14 +3,12 @@
 
 void Circle::Size()
 {
-
 	radius = 32;
 
 	area = radius * radius * pi;
-
 }
 
 void Circle::Draw()
 {
-	printf("‰~‚Ì–ÊÏ@%d\n", area);
+	printf("‰~‚Ì–ÊÏ@%d\ni", area);
 }

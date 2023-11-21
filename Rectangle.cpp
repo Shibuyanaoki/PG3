@@ -3,7 +3,6 @@
 
 void Rectangle::Size()
 {
-
 	diagonal = 20;
 
 	area = diagonal * diagonal / 2;

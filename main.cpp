@@ -11,6 +11,7 @@ int main() {
 	isAhape_[1] = new Rectangle;
 
 	for (int i = 0; i < 2; i++) {
+		isAhape_[i]->Size();
 		isAhape_[i]->Draw();
 	}
 
