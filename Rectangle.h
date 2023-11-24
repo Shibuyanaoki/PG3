@@ -1,11 +1,15 @@
 #pragma once
-#include "IsShape.h"
-class Rectangle:public IsShape
+#include "IShape.h"
+class Rectangle:public IShape
 {
 
 	void Size()override;
 
 	void Draw()override;
+
+private:
+	//‘ÎŠpü
+	int diagonal = 0;
 
 };
 

@@ -29,7 +29,7 @@
     <ClInclude Include="Circle.h">
       <Filter>ヘッダー ファイル</Filter>
     </ClInclude>
-    <ClInclude Include="IsShape.h">
+    <ClInclude Include="IShape.h">
       <Filter>ヘッダー ファイル</Filter>
     </ClInclude>
     <ClInclude Include="Rectangle.h">
