@@ -16,12 +16,14 @@ void Print3() {
 int main() {
 
 	std::thread th1(Print1);
-	th1.join();
-
+	
 	std::thread th2(Print2);
-	th2.join();
 
 	std::thread th3(Print3);
+
+
+	th1.join();
+	th2.join();
 	th3.join();
 
 	return 0;
