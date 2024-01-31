@@ -4,7 +4,6 @@
 
 void Print1() {
 	printf("thread1\n");
-
 }
 
 void Print2() {
@@ -16,8 +15,6 @@ void Print3() {
 }
 
 int main() {
-
-	int num = 1;
 
 	std::thread th1(Print1);
 	th1.join();
